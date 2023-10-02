@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { type ComponentFixture, TestBed } from '@angular/core/testing'
 
 import { CategoryFilterComponent } from './category-filter.component'
-import { EnrichedChallenge } from 'src/app/score-board-preview/types/EnrichedChallenge'
+import { type EnrichedChallenge } from 'src/app/score-board-preview/types/EnrichedChallenge'
 import { TranslateModule } from '@ngx-translate/core'
 import { MatTooltipModule } from '@angular/material/tooltip'
 
@@ -17,7 +17,7 @@ describe('CategoryFilterComponent', () => {
       ],
       declarations: [CategoryFilterComponent]
     })
-    .compileComponents()
+      .compileComponents()
 
     fixture = TestBed.createComponent(CategoryFilterComponent)
     component = fixture.componentInstance

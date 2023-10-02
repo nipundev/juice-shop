@@ -1,6 +1,6 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core'
+import { Component, Input, type OnChanges, type OnInit, type SimpleChanges } from '@angular/core'
 
-import { EnrichedChallenge } from '../../types/EnrichedChallenge'
+import { type EnrichedChallenge } from '../../types/EnrichedChallenge'
 
 @Component({
   selector: 'coding-challenge-progress-score-card',
@@ -24,11 +24,11 @@ export class CodingChallengeProgressScoreCardComponent implements OnInit, OnChan
 
   private updatedNumberOfSolvedChallenges (): void {
     const availableCodingChallenges = this.allChallenges
-    .filter((challenge) => challenge.hasCodingChallenge)
+      .filter((challenge) => challenge.hasCodingChallenge)
 
     this.solvedCodingChallenges = availableCodingChallenges
-    .map((challenge) => challenge.codingChallengeStatus)
-    .reduce((a, b) => a + b, 0) // sum up the scores
+      .map((challenge) => challenge.codingChallengeStatus)
+      .reduce((a, b) => a + b, 0) // sum up the scores
     // multiply by 2 because each coding challenge has 2 parts (find it and fix it)
     this.availableCodingChallenges = availableCodingChallenges.length * 2
   }

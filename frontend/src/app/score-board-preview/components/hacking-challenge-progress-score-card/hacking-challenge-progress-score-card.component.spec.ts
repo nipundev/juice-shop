@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { type ComponentFixture, TestBed } from '@angular/core/testing'
 
 import { HackingChallengeProgressScoreCardComponent } from './hacking-challenge-progress-score-card.component'
 import { TranslateModule } from '@ngx-translate/core'
@@ -13,7 +13,7 @@ describe('HackingChallengeProgressScoreCardComponent', () => {
       declarations: [ScoreCardComponent, HackingChallengeProgressScoreCardComponent],
       imports: [TranslateModule.forRoot()]
     })
-    .compileComponents()
+      .compileComponents()
 
     fixture = TestBed.createComponent(HackingChallengeProgressScoreCardComponent)
     component = fixture.componentInstance

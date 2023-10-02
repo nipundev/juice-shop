@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, type Routes } from '@angular/router'
 import { ConfigurationService } from '../Services/configuration.service'
 import { OverlayContainer } from '@angular/cdk/overlay'
 import { MatCardModule } from '@angular/material/card'
@@ -30,10 +30,10 @@ const routes: Routes = [
     MatInputModule,
     MatSnackBarModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class FaucetModule {
-      constructor (public configurationService: ConfigurationService, public overlayContainer: OverlayContainer) {
+  constructor (public configurationService: ConfigurationService, public overlayContainer: OverlayContainer) {
     configurationService.getApplicationConfiguration().subscribe((conf) => {
       overlayContainer.getContainerElement().classList.add(conf.application.theme + '-theme')
     })

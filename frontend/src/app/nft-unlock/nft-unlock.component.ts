@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core'
 import { KeysService } from '../Services/keys.service'
 
 @Component({
-  selector: "app-nft-unlock",
-  templateUrl: "./nft-unlock.component.html",
-  styleUrls: ["./nft-unlock.component.scss"],
+  selector: 'app-nft-unlock',
+  templateUrl: './nft-unlock.component.html',
+  styleUrls: ['./nft-unlock.component.scss']
 })
 export class NFTUnlockComponent {
   privateKey: string

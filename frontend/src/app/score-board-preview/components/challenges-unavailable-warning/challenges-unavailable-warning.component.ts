@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core'
+import { Component, EventEmitter, Input, type OnChanges, Output } from '@angular/core'
 
 import { FilterSetting } from '../../filter-settings/FilterSetting'
-import { EnrichedChallenge } from '../../types/EnrichedChallenge'
+import { type EnrichedChallenge } from '../../types/EnrichedChallenge'
 
 @Component({
   selector: 'challenges-unavailable-warning',

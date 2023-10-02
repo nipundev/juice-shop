@@ -6,7 +6,7 @@
 import { CookieService } from 'ngx-cookie'
 import { WindowRefService } from '../Services/window-ref.service'
 import { Router } from '@angular/router'
-import { Component, NgZone, OnInit } from '@angular/core'
+import { Component, NgZone, type OnInit } from '@angular/core'
 import { UntypedFormControl, Validators } from '@angular/forms'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { UserService } from '../Services/user.service'
@@ -64,9 +64,9 @@ export class LoginComponent implements OnInit {
           console.log(this.redirectUri + ' is not an authorized redirect URI for this application.')
         }
       }
-    }, (err) => console.log(err))
+    }, (err) => { console.log(err) })
 
-    this.formSubmitService.attachEnterKeyHandler('login-form', 'loginButton', () => this.login())
+    this.formSubmitService.attachEnterKeyHandler('login-form', 'loginButton', () => { this.login() })
   }
 
   login () {

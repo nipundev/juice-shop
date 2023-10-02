@@ -1,4 +1,4 @@
-import { Product } from '../../../data/types'
+import { type Product } from '../../../data/types'
 
 describe('/#/contact', () => {
   beforeEach(() => {
@@ -236,9 +236,9 @@ describe('/#/contact', () => {
 
   describe('challenge "dlpPastebinDataLeak"', () => {
     it('should be possible to post dangerous ingredients of unsafe product as feedback', () => {
-      cy.task('GetPastebinLeakProduct').then((products: Product) => {
+      cy.task<Product>('GetPastebinLeakProduct').then((pastebinLeakProduct: Product) => {
         cy.get('#comment').type(
-          products.keywordsForPastebinDataLeakChallenge.toString()
+          pastebinLeakProduct.keywordsForPastebinDataLeakChallenge ? pastebinLeakProduct.keywordsForPastebinDataLeakChallenge.toString() : '?'
         )
       })
       cy.get('#rating').click()

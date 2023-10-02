@@ -1,4 +1,4 @@
-import { Challenge } from '../../../data/types'
+import { type Challenge } from '../../../data/types'
 
 Cypress.Commands.add(
   'expectChallengeSolved',
@@ -33,10 +33,10 @@ Cypress.Commands.add(
   'login',
   (context: { email: string, password: string, totpSecret?: string }) => {
     cy.visit('/#/login')
-    if (context.email.match(/\S+@\S+\.\S+/)) {
+    if (context.email.match(/\S+@\S+\.\S+/) != null) {
       cy.get('#email').type(context.email)
     } else {
-      cy.task('GetFromConfig', 'application.domain').then(
+      cy.task<string>('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
           const email = context.email.concat('@', appDomain)
           cy.get('#email').type(email)
@@ -49,17 +49,17 @@ Cypress.Commands.add(
   }
 )
 
-function walkRecursivelyInArray (arr: Number[], cb: Function, index = 0) {
-  if (!arr.length) return
+function walkRecursivelyInArray (arr: number[], cb: any, index = 0) {
+  if (arr.length === 0) return
   const ret = cb(index, arr.shift());
   // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
   ((ret && ret.chainerId) ? ret : cy.wrap(ret))
     .then((ret: boolean) => {
       if (!ret) return
-      return walkRecursivelyInArray(arr, cb, index + 1)
+      walkRecursivelyInArray(arr, cb, index + 1)
     })
 }
 
-Cypress.Commands.add('eachSeries', { prevSubject: 'optional' }, (arrayGenerated: Number[], checkFnToBeRunOnEach: Function) => {
-  return walkRecursivelyInArray(arrayGenerated, checkFnToBeRunOnEach)
+Cypress.Commands.add('eachSeries', { prevSubject: 'optional' } as any, (arrayGenerated: number[], checkFnToBeRunOnEach: any) => {
+  walkRecursivelyInArray(arrayGenerated, checkFnToBeRunOnEach)
 })

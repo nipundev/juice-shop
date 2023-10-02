@@ -204,7 +204,7 @@ export function HttpLoaderFactory (http: HttpClient) {
     FeedbackDetailsComponent,
     CodeSnippetComponent,
     CodeAreaComponent,
-    CodeFixesComponent,
+    CodeFixesComponent
   ],
   imports: [
     BrowserModule,
@@ -263,7 +263,7 @@ export function HttpLoaderFactory (http: HttpClient) {
     MatChipsModule,
     NgxTextDiffModule,
     HighlightModule,
-    ScoreBoardPreviewModule,
+    ScoreBoardPreviewModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

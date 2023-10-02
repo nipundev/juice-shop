@@ -48,7 +48,7 @@ import { DifficultySelectionSummaryPipe } from './components/filter-settings/pip
     TutorialModeWarningComponent,
     WarningCardComponent,
     DifficultySelectionSummaryPipe,
-    DifficultyStarsComponent,
+    DifficultyStarsComponent
   ],
   imports: [
     CommonModule,
@@ -65,8 +65,8 @@ import { DifficultySelectionSummaryPipe } from './components/filter-settings/pip
     ReactiveFormsModule,
     RouterModule,
     TranslateModule,
-    MatProgressSpinnerModule,
-  ],
+    MatProgressSpinnerModule
+  ]
 })
 class ScoreBoardPreviewModule {}
 
