@@ -44,6 +44,7 @@ mentioned or used!
 
 ### Pod- & Webcasts
 
+* [ZAP Chat 05 Modern Apps Part 1](https://www.youtube.com/watch?v=Rq_d7OLmMfw) on [ZAP](https://www.youtube.com/@psiinon) with Simon Bennetts
 * [OWASP Spotlight - Project 25 - OWASP Juice Shop](https://www.youtube.com/watch?v=--50rE76EeA) by Vandana Verma with
   Björn Kimminich
 * [Visual application security testing with ZAP and Simon Bennetts #DemoDays](https://youtu.be/4xBJsRNV9ds) by [GitHub](https://www.youtube.com/channel/UC7c3Kb6jYCRj4JOHHZTxKsQ) with Simon Bennetts :mega:
@@ -204,6 +205,7 @@ mentioned or used!
 
 ## Lectures and Trainings
 
+* [Introduction to OWASP Top 10 Security Risks](https://www.pluralsight.com/cloud-guru/courses/introduction-to-owasp-top-10-security-risks) course by Chris Jackson :dollar:
 * Courses on the [freeCodeCamp.org](https://www.YouTube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)
   YouTube channel
   * [Ethical Hacking 101: Web App Penetration Testing - a full course for beginners](https://youtu.be/2_lswM1S264) :godmode: by HackerSploit
